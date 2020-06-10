@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="actitimeSuite" verbose="1">
+
+	<!--  	<listeners>
+		<listener class-name="com.listeners.TestListeners" />
+	</listeners>
+	-->
+	<test name="finalProject">
+
+		<classes>
+			<!--   <class name="com.test.ValidLogin" /> -->
+			<class name="com.test.InvalidLogin" />
+			<class name="com.test.ValidLogin" />
+		</classes>
+	</test>
+
+
+	<!-- <test name="ChromeTestCases"> <parameter name="browser" value="chrome" 
+		/> <classes> <class name="com.parallelTest.CrossBrowserTests" /> </classes> 
+		</test> <test name="FirefoxTestCases"> <parameter name="browser" value="firefox" 
+		/> <classes> <class name="com.parallelTest.CrossBrowserTests" /> </classes> 
+		</test> <test name="IeTestCases"> <parameter name="browser" value="Ie" /> 
+		<classes> <class name="com.parallelTest.CrossBrowserTests" /> </classes> 
+		</test> -->
+</suite>
+ 

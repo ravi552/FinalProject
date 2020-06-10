@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [actitimeSuite]">
+  <test name="finalProject(failed)">
+    <classes>
+      <class name="com.test.InvalidLogin">
+        <methods>
+          <include name="loginPage"/>
+          <include name="openBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.test.InvalidLogin -->
+      <class name="com.test.ValidLogin">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.test.ValidLogin -->
+    </classes>
+  </test> <!-- finalProject(failed) -->
+</suite> <!-- Failed suite [actitimeSuite] -->
