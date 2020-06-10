@@ -23,13 +23,12 @@ public class InvalidLogin extends Base{
 		int rowCount=libfile.getRowCount(EXCEL_PATH, "Sheet1");
 		System.out.println(rowCount);
 		for(int i=1;i<=rowCount;i++) {
-			String userName = libfile.getCellData(EXCEL_PATH, "Sheet1", i, 0);
+			String userName = libfile.getCellData(EXCEL_PATH, "Sheet1",i,0);
 			login.setTxtUserName(userName);
-			String password = libfile.getCellData(EXCEL_PATH, "Sheet1", i, 1);
+			String password = libfile.getCellData(EXCEL_PATH, "Sheet1",i,1);
 			login.setTxtPassword(password);
 			login.setBtnLogin();
 			Thread.sleep(3000);
-
 			Assert.assertTrue(login.getErrMsg().isDisplayed(),"something wrong" );
 			libfile.writeDataintoExcel(EXCEL_PATH, "Sheet1", i, 2, "passed");
 			commonLib.captureScreenShots();
