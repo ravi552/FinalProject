@@ -2,19 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44148" started-at="2020-06-11T14:54:39Z" finished-at="2020-06-11T14:55:23Z">
+  <suite name="Default suite" duration-ms="118085" started-at="2020-06-11T18:55:03Z" finished-at="2020-06-11T18:57:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44148" started-at="2020-06-11T14:54:39Z" finished-at="2020-06-11T14:55:23Z">
+    <test name="Default test" duration-ms="118085" started-at="2020-06-11T18:55:03Z" finished-at="2020-06-11T18:57:01Z">
       <class name="com.newUser.CreateNewUser">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.newUser.CreateNewUser@35bbe5e8]" name="openBrowser" is-config="true" duration-ms="15864" started-at="2020-06-11T20:24:39Z" finished-at="2020-06-11T20:24:55Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.newUser.CreateNewUser@5a39699c]" name="openBrowser" is-config="true" duration-ms="18546" started-at="2020-06-12T00:25:03Z" finished-at="2020-06-12T00:25:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="createNewUser()[pri:0, instance:com.newUser.CreateNewUser@35bbe5e8]" name="createNewUser" duration-ms="28280" started-at="2020-06-11T20:24:55Z" finished-at="2020-06-11T20:25:23Z">
+        <test-method status="PASS" signature="createNewUser()[pri:0, instance:com.newUser.CreateNewUser@5a39699c]" name="createNewUser" duration-ms="97145" started-at="2020-06-12T00:25:21Z" finished-at="2020-06-12T00:26:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewUser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.newUser.CreateNewUser@5a39699c]" name="tearDown" is-config="true" duration-ms="2382" started-at="2020-06-12T00:26:59Z" finished-at="2020-06-12T00:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.newUser.CreateNewUser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
