@@ -3,19 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [actitimeSuite]">
   <test name="finalProject(failed)">
     <classes>
-      <class name="com.test.InvalidLogin">
-        <methods>
-          <include name="loginPage"/>
-          <include name="openBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.test.InvalidLogin -->
       <class name="com.test.ValidLogin">
         <methods>
           <include name="openBrowser"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.test.ValidLogin -->
+      <class name="com.newUser.CreateNewUser">
+        <methods>
+          <include name="createNewUser"/>
+          <include name="openBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.newUser.CreateNewUser -->
     </classes>
   </test> <!-- finalProject(failed) -->
 </suite> <!-- Failed suite [actitimeSuite] -->

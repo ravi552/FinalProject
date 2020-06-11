@@ -13,4 +13,5 @@ public interface AutoConstant {
 	String IE_VALUE = "./Drivers/IEDriver.exe";
 	String PROPERTIES_PATH = "./Extdata/projectData.properties";
 	String EXCEL_PATH =	"./Extdata/LoginData.xlsx";	
+	String Excel_PATH_NEW_CUSTOMER="./Extdata/NewCustomer.xlsx";
 }

@@ -2,6 +2,7 @@ package com.test;
 
 import org.testng.annotations.Test;
 
+import com.newUser.CreateNewUser;
 import com.pages.Login;
 import com.utilities.Base;
 import com.utilities.FileLibrary;
@@ -17,5 +18,6 @@ public class ValidLogin extends Base {
 		String password = libfile.getPropKeyValue(PROPERTIES_PATH, "password");
 		login.setTxtPassword(password);
 		login.setBtnLogin();
+		//return CreateNewUser.class;
 	}
 }

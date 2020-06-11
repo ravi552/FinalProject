@@ -4,9 +4,11 @@ import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -20,6 +22,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import com.aventstack.extentreports.utils.FileUtil;
+import com.pages.NewCustomer;
 
 /**
  * This generic class contains all the controls of webDriver interface 
@@ -27,6 +30,7 @@ import com.aventstack.extentreports.utils.FileUtil;
  *
  */
 public class WebDriverCommonLibrary extends Base {
+	NewCustomer nc = new NewCustomer(driver);
 
 	public void waitForPageLoad() {
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
@@ -41,6 +45,40 @@ public class WebDriverCommonLibrary extends Base {
 	public String getPageTitle() {
 		String title =driver.getTitle();
 		return title;
+	}
+
+	public void selectDept(List<WebElement> element,String text) throws Throwable {
+		//driver.findElement(By.xpath("(//div[@class='selectorPlaceholder'])[2]")).click();
+		//List<WebElement> element =driver.findElements(By.xpath("//div[@class='item']"));
+		nc.getClickDept().click();
+		Thread.sleep(2000);
+		element=nc.getClickDropdown();
+		int size=element.size();
+		for(int i=0;i<=size-1;i++) {
+			String daptVals=element.get(i).getText();
+			if(daptVals.equals(text)) {
+				element.get(i).click();
+			}
+		}
+	}
+	public void selectUser(List<WebElement> element,String text) {
+		element = nc.getSelectUser();
+		int size=element.size();
+		for(int i=0;i<=size-1;i++) {
+			String user=element.get(i).getText();
+			if(user.equals(text)) {
+				element.get(i).click();
+			}
+		}
+	}
+	public void selectHireDate(WebElement element1,WebElement element2 ) throws Throwable {
+		nc.getClickHireDate().click();
+		Thread.sleep(3000);
+		nc.getSelectDate().click();
+	}
+	public void clickOkPopup() {
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
 	}
 
 	public void select(WebElement element,String text) {

@@ -11,8 +11,9 @@
 
 		<classes>
 			<!--   <class name="com.test.ValidLogin" /> -->
-			<class name="com.test.InvalidLogin" />
+			<!--   <class name="com.test.InvalidLogin" /> -->
 			<class name="com.test.ValidLogin" />
+			<class name="com.newUser.CreateNewUser" />
 		</classes>
 	</test>
 
