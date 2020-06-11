@@ -48,9 +48,9 @@ public class Base implements AutoConstant{
 		String test_URL =fl.getPropKeyValue(PROPERTIES_PATH,"url");
 		driver.get(test_URL);
 	}
-	
-	//public void tearDown() {
-		//driver.close();
-	//}
+	@AfterClass
+	public void tearDown() {
+		driver.close();
+	}
 
 }

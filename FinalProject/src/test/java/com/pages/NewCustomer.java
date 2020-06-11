@@ -15,7 +15,6 @@ public class NewCustomer {
 	
 	@FindBy(xpath="//a[@class='content users']//div[@id='container_users']")
 	private WebElement clickUser;
-
 	public WebElement getClickUser() {
 		return clickUser;
 	}
@@ -25,7 +24,6 @@ public class NewCustomer {
 	
 	@FindBy(xpath="//div[@class='components_button withPlusIcon']//div[.='New User']")
 	private WebElement clickNewUser;
-
 	public WebElement getClickNewUser() {
 		return clickNewUser;
 	}
@@ -35,38 +33,20 @@ public class NewCustomer {
 	
 	@FindBy(xpath="(//input[@name='firstName'])[2]")
 	private WebElement txtFirstName;
-
-	public WebElement getTxtFirstName() {
+	/*public WebElement getTxtFirstName() {
 		return txtFirstName;
 	}
 	public void setTxtFirstName(String fName) {
 		txtFirstName.sendKeys(fName);
-	}
-	
+ 	} */
 	@FindBy(xpath="(//input[@name='lastName'])[2]")
 	private WebElement txtSecondName;
-	
-	public WebElement getTxtSecondName() {
-		return txtSecondName;
-	}
-	public void setTxtSecondName(String sName) {
-		txtSecondName.sendKeys(sName);;
-	}
-
 	@FindBy(xpath="(//input[@name='email'])[2]")
 	public WebElement txtEmail;
 
-	public WebElement getTxtEmail() {
-		return txtEmail;
-	}
-	public void setTxtEmail(String email) {
-		txtEmail.sendKeys(email);
-	}
 	
 	@FindBy(xpath="(//div[@class='selectorPlaceholder'])[2]")
 	private WebElement clickDept;
-
-	
 	public WebElement getClickDept() {
 		return clickDept;
 	}
@@ -85,7 +65,6 @@ public class NewCustomer {
 	
 	@FindBy(xpath="(//button[@class='x-btn-text'])[4]")
 	private WebElement clickHireDate;
-
 	public WebElement getClickHireDate() {
 		return clickHireDate;
 	}
@@ -95,7 +74,6 @@ public class NewCustomer {
 	
 	@FindBy(xpath="(//td[@class='x-date-active'])[18]")
 	private WebElement selectDate;
-
 	public WebElement getSelectDate() {
 		return selectDate;
 	}
@@ -105,7 +83,6 @@ public class NewCustomer {
 	
 	@FindBy(xpath="(//td[@class='tumbler']//div)[2]")
 	private WebElement clickTimeTrack;
-
 	public WebElement getClickTimeTrack() {
 		return clickTimeTrack;
 	}
@@ -115,7 +92,6 @@ public class NewCustomer {
 	
 	@FindBy(xpath="//div[@class='buttonsBox']//div[.='Save & Send Invitation']")
 	private WebElement clickSave;
-
 	public WebElement getClickSave() {
 		return clickSave;
 	}
@@ -125,7 +101,6 @@ public class NewCustomer {
 	
 	@FindBy(xpath="(//div[@class='ui-dialog-buttonset']//span[.='OK'])[4]")
 	private WebElement clickalertok;
-
 	public WebElement getClickalertok() {
 		return clickalertok;
 	}
@@ -135,7 +110,6 @@ public class NewCustomer {
 	
 	@FindBy(xpath="(//div[@class='closeLink']//span[.='Close'])[1]")
 	private WebElement clickClose;
-
 	public WebElement getClickClose() {
 		return clickClose;
 	}
@@ -145,12 +119,17 @@ public class NewCustomer {
 	
 	@FindBy(xpath="//div[@class='userNameContent clickable']//span[@class='userNameSpan']")
 	private List<WebElement> selectUser;
-
 	public List<WebElement> getSelectUser() {
 		return selectUser;
 	}
 	public void setSelectUser(List<WebElement> selectUser) {
 		this.selectUser = selectUser;
+	}
+	
+	public void newUser(String FIRST_NAME, String LAST_NAME, String EMAIL) {
+		txtFirstName.sendKeys(FIRST_NAME);
+		txtSecondName.sendKeys(LAST_NAME);
+		txtEmail.sendKeys(EMAIL);
 	}
 	
 }

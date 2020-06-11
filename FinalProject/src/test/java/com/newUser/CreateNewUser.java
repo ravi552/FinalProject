@@ -28,11 +28,10 @@ public class CreateNewUser extends Base{
 		nc.setClickNewUser();
 		Thread.sleep(4000);
 		String firstName=fLib.getCellData(Excel_PATH_NEW_CUSTOMER, "Sheet1", 2, 0);
-		nc.setTxtFirstName(firstName);
+		//nc.setTxtFirstName(firstName);
 		String secondtName=fLib.getCellData(Excel_PATH_NEW_CUSTOMER, "Sheet1", 2, 1);
-		nc.setTxtSecondName(secondtName);
 		String email=fLib.getCellData(Excel_PATH_NEW_CUSTOMER, "Sheet1", 2, 2);
-		nc.setTxtEmail(email);
+		nc.newUser(firstName, secondtName, email);
 		wcLib.selectDept(nc.getClickDropdown(),"Quality Control");
 		wcLib.selectHireDate(nc.getClickHireDate(), nc.getSelectDate());
 		nc.setClickTimeTrack();
@@ -42,7 +41,7 @@ public class CreateNewUser extends Base{
 		Thread.sleep(2000);
 		nc.setClickClose();
 		Thread.sleep(2000);
-		wcLib.selectUser(nc.getSelectUser(), "Larry, Mike");
+		wcLib.selectUser(nc.getSelectUser(), "Young, Zimmy");
 		
 	}
 

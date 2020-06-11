@@ -61,12 +61,14 @@ public class WebDriverCommonLibrary extends Base {
 			}
 		}
 	}
-	public void selectUser(List<WebElement> element,String text) {
+	public void selectUser(List<WebElement> element,String text) throws Throwable {
 		element = nc.getSelectUser();
 		int size=element.size();
 		for(int i=0;i<=size-1;i++) {
 			String user=element.get(i).getText();
+			Thread.sleep(2000);
 			if(user.equals(text)) {
+				Thread.sleep(2000);
 				element.get(i).click();
 			}
 		}
